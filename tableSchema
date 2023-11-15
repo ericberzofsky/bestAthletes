@@ -1,0 +1,33 @@
+# Build the tables and populate
+create table athletes (
+id int primary key,
+name varchar(30)
+);
+
+insert into athletes (id, name) values (1,"Joe A");
+insert into athletes (id,name) values (2,"Joe B");
+insert into athletes (id,name) values (3,"Joe C");
+insert into athletes (id,name) values (4,"Joe D");
+insert into athletes (id,name) values (5,"Joe E");
+insert into athletes (id,name) values (6,"Joe F");
+insert into athletes (id,name) values (7,"Joe G");
+insert into athletes (id,name) values (8,"Joe H");
+insert into athletes (id,name) values (9,"Joe I");
+insert into athletes (id,name) values (10,"Joe J");
+
+create table scores (
+athlete_id int,
+sport varchar(30),
+score int 
+);
+
+insert into scores (athlete_id, sport, score) values (1,"Baseball", 20);
+insert into scores (athlete_id, sport, score) values (2,"Baseball", 21);
+insert into scores (athlete_id, sport, score) values (10,"Baseball", 23);
+insert into scores (athlete_id, sport, score) values (6,"Baseball", 19);
+insert into scores (athlete_id, sport, score) values (3,"Football", 30);
+insert into scores (athlete_id, sport, score) values (5,"Football", 31);
+insert into scores (athlete_id, sport, score) values (7,"Football", 2);
+insert into scores (athlete_id, sport, score) values (9,"Soccer", 300);
+insert into scores (athlete_id, sport, score) values (8,"Soccer", 301);
+insert into scores (athlete_id, sport, score) values (1,"Soccer", 25);

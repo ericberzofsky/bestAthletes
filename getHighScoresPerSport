@@ -1,0 +1,7 @@
+select sco.sport, ath.name, sco.score
+from athletes as ath, scores as sco
+where ath.id = sco.athlete_id
+and (sco.score in (select max(score) from scores sci where sco.sport = sci.sport) /* the max */
+     or sco.score in (SELECT MAX(score) from scores sci2 where sco.sport = sci2.sport and sci2.score < (select max(score) from scores sci3 where sco.sport = sci3.sport))
+     )
+order by sco.sport asc, sco.score desc
